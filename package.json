@@ -1,0 +1,53 @@
+{
+  "name": "blog_web_reactjs",
+  "version": "1.0.0",
+  "description": "blog4webwithreactjs",
+  "main": "entry.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoeyCurry/blog_web.git"
+  },
+  "keywords": [
+    "react",
+    "reactjs",
+    "webpack",
+    "blog"
+  ],
+  "author": "jiangjun",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JoeyCurry/blog_web/issues"
+  },
+  "homepage": "https://github.com/JoeyCurry/blog_web#readme",
+  "devDependencies": {
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-stage-3": "^6.11.0",
+    "css-loader": "^0.23.1",
+    "file-loader": "^0.9.0",
+    "react-hot-loader": "^1.3.0",
+    "style-loader": "^0.13.1",
+    "uglify": "^0.1.5",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.3",
+    "webpack-dev-server": "^1.15.0"
+  },
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "immutable": "^3.8.1",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "react-modal": "^1.5.2",
+    "react-redux": "^4.4.5",
+    "react-router": "^2.7.0",
+    "redux": "^3.5.2",
+    "redux-immutablejs": "0.0.8",
+    "redux-thunk": "^2.1.0",
+    "whatwg-fetch": "^1.0.0"
+  }
+}
