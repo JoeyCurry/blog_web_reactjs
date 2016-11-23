@@ -46,10 +46,12 @@ var config = {
         loader: 'style!sass'
     },
     {
-      test: /\.jsx?$/,
-      loaders: ['react-hot', 'babel'],
-      exclude: [node_modules_dir],
-      include: path.join(__dirname, 'src')
+        test: /\.jsx?$/,
+        loader: 'babel-loader',
+        exclude: [node_modules_dir],
+        query: {
+            presets: ['es2015']
+        }
     },
     {
         test: /\.(png|jpg)$/,
@@ -64,7 +66,7 @@ var config = {
     inline: true,
     stats: "error-only",
     host:'0.0.0.0',
-    port: 9100
+    port: 7100
   }
 };
 
