@@ -1,6 +1,12 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-//import { Button } from 'react-bootstrap';
+import {
+    Button,
+    Navbar,
+    NavItem,
+    Nav,
+} from 'react-bootstrap';
+import NavLeader from "../common/components/navLeader"
 
 class HomePage extends Component{
 
@@ -8,9 +14,26 @@ class HomePage extends Component{
         super(props)
     }
 
+    handleClick(item){
+
+    }
+
     render(){
         return (
-            <div>test</div>
+            <div>
+                <NavLeader
+                    activeKey={1}
+                    handleMainNavItemOne={()=>{console.log("11111");}}
+                    handleMainNavItemTwo={()=>{console.log("222222");}}
+                    isLogin={false}
+                    handleUserInfo={()=>{console.log("3333");}}
+                    handleUserMsg={()=>{console.log("4444");}}
+                    handleUserCollect={()=>{console.log("55555");}}
+                    handleQuit={()=>{console.log("66666");}}
+                    handleAboutMe={()=>{console.log("77777");}}
+                    userName="江军"
+                     />
+        </div>
         )
     }
 }
