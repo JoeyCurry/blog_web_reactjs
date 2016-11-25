@@ -6,7 +6,9 @@ import {
     NavItem,
     Nav,
 } from 'react-bootstrap';
-import NavLeader from "../common/components/navLeader"
+import NavLeader from "../../common/components/navLeader.js"
+import BlogList from "./components/blogList.js"
+import styles from "../css/leader.css"
 
 class HomePage extends Component{
 
@@ -14,25 +16,17 @@ class HomePage extends Component{
         super(props)
     }
 
-    handleClick(item){
-
-    }
 
     render(){
         return (
             <div>
                 <NavLeader
+                    style={styles.leader}
                     activeKey={1}
-                    handleMainNavItemOne={()=>{console.log("11111");}}
-                    handleMainNavItemTwo={()=>{console.log("222222");}}
                     isLogin={false}
-                    handleUserInfo={()=>{console.log("3333");}}
-                    handleUserMsg={()=>{console.log("4444");}}
-                    handleUserCollect={()=>{console.log("55555");}}
-                    handleQuit={()=>{console.log("66666");}}
-                    handleAboutMe={()=>{console.log("77777");}}
                     userName="江军"
                      />
+                 <BlogList />
         </div>
         )
     }
