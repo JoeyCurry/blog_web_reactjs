@@ -55,6 +55,10 @@ var config = {
                 test: /\.(png|jpg)$/,
                 exclude: [node_modules_dir],
                 loader: 'url?limit=6400'
+            },
+            {
+                test: /\.json$/,
+                loader: 'json'
             }
         ]
     },

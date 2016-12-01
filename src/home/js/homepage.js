@@ -7,6 +7,7 @@ import {
     Nav,
 } from 'react-bootstrap';
 import NavLeader from "../../common/components/navLeader.js"
+import Footer from "../../common/components/footer.js"
 import BlogList from "./components/blogList.js"
 import styles from "../css/leader.css"
 
@@ -19,29 +20,23 @@ class HomePage extends Component{
 
     render(){
         return (
-            <div>
+
+            <div >
                 <NavLeader
                     style={styles.leader}
                     activeKey={1}
                     isLogin={false}
                     userName="江军"
                      />
-                 <BlogList />
+                     <BlogList
+                         style={styles.blogList}/>
+
+
         </div>
         )
     }
 }
 
-function mapStateToProps(state,props) {
-    return {
-        // : state.get(''),
-    }
-}
 
-function mapActionToProps(){
-    return {
 
-    }
-}
-
-export default connect(mapStateToProps, mapActionToProps())(HomePage);
+export default HomePage;

@@ -117,16 +117,4 @@ class NavLeader extends Component{
     }
 }
 
-function mapStateToProps(state,props) {
-    return {
-        // : state.get(''),
-    }
-}
-
-function mapActionToProps(){
-    return {
-
-    }
-}
-
-export default connect(mapStateToProps, mapActionToProps())(NavLeader);
+export default NavLeader;
