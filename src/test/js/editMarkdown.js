@@ -41,6 +41,14 @@ class EditMarkdown extends Component{
 
         return(
             <div className={styles.container}>
+                <div className={styles.title_container}>
+                    <FormGroup>
+                     <InputGroup>
+                       <InputGroup.Addon>Title</InputGroup.Addon>
+                       <FormControl type="text" placeholder="输入标题"/>
+                     </InputGroup>
+                   </FormGroup>
+                </div>
                 <div className="editor-pane">
                     {/* <MarkdownControls
                         onChange={()=>this.onControlsChange()}

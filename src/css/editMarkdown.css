@@ -9,9 +9,8 @@
     box-shadow: 0 0 1px 1px rgba(0,0,0,0.3);
 }
 
-.container{
-    width: 94%;
-    margin-left: 3%;
-    display: flex;
-    
+.title_container{
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 10px;
 }

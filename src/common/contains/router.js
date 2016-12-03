@@ -14,7 +14,7 @@ ReactDOM.render(
     <Provider store={Store}>
         <Router history={hashHistory}>
           <Route path="/" component={Index}>
-                <IndexRoute component={EDITMARKDOWN_COMPONENT} /> {/*首页*/}
+                <IndexRoute component={HOMEPAGEINDEX_COMPONENT} /> {/*首页*/}
 
           </Route>
         </Router>

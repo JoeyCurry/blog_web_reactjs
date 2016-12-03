@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import styles from '../../css/blogListItem.css';
+
 import {
     FormGroup,
     Glyphicon,
@@ -8,9 +9,20 @@ import {
     FormControl,
 } from 'react-bootstrap';
 import {
-    imgSearch
-} from "../../../common/imageUrls.js"
-import ReactMarkdown from 'react-markdown'
+    imgHeader,
+    imgBlogPic
+} from "../../../common/imageUrls.js";
+import ReactMarkdown from 'react-markdown';
+
+// material-ui
+import lightBaseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import {Card, CardActions,CardMedia,CardTitle, CardHeader, CardText} from 'material-ui/Card';
+import FlatButton from 'material-ui/FlatButton';
+import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+
+
 
 class BlogListItem extends Component{
     constructor(props){
@@ -19,33 +31,34 @@ class BlogListItem extends Component{
     }
 
     render(){
-
         return(
-            <div className={styles.container}>
-                <div className={styles.title_content}>
-                    <div className={styles.title}>
-                        {this.props.data.title}
-                    </div>
-                    <div className={styles.secondTitle}>
-                        {this.props.data.publish_time}&nbsp;By&nbsp;<a href="#">{this.props.data.author}</a>
-                    </div>
-                </div>
-                <ReactMarkdown
-                    source={this.props.data.content}
-                    className={styles.content}>
-                </ReactMarkdown>
-                <div className={styles.foot_content}>
-                    <div className={styles.read}>
-                        阅读量:{this.props.data.read_num}
-                    </div>
-                    <div className={styles.collect}>
-                        收藏:{this.props.data.collect_num}
-                    </div>
-                    <div className={styles.comment}>
-                        评论：{this.props.data.comment_num}
-                    </div>
-                </div>
+            <div style={{paddingBottom:"20px"}}>
+                <MuiThemeProvider muiTheme={getMuiTheme(lightBaseTheme)}>
+                    <Card>
+                       <CardHeader
+                         title={this.props.data.author}
+                         avatar={imgHeader}
+                       />
+                       <CardMedia
+                         overlay={<CardTitle title={this.props.data.title} subtitle={this.props.data.publish_time} />}
+                       >
+                         <img src={imgBlogPic} />
+                       </CardMedia>
+                       <CardText>
+                           <ReactMarkdown
+                                   source={this.props.data.content}
+                                   className={styles.content}>
+                        </ReactMarkdown>
+                       </CardText>
+                       <CardActions>
+                         <FlatButton label="喜欢" />
+                         <FlatButton label="不喜欢" />
+                       </CardActions>
+                     </Card>
+                </MuiThemeProvider>
             </div>
+
+
 
         )
     }
