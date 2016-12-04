@@ -97,9 +97,8 @@ class NavLeader extends Component{
                             </Nav>
                         }
                         <Navbar.Form pullRight>
-                          <FormGroup validationState="success">
+                          <FormGroup validationState="success" action={()=>{console.log("llddd");}}>
                             <FormControl
-                                inputRef={(ref)=>{this.input = ref;}}
                                 type="text"
                                 placeholder="Search" />
                           </FormGroup>
