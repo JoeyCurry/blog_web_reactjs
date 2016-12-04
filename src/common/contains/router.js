@@ -5,7 +5,8 @@ import { Provider } from 'react-redux';
 import Store from '../stores/Store';
 import Index from './index';
 import {
-    HOMEPAGEINDEX_COMPONENT
+    HOMEPAGEINDEX_COMPONENT,
+    EDITMARKDOWN_COMPONENT,
 } from '../routerNav';
 
 global.Navigator = hashHistory;

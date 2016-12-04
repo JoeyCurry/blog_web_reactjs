@@ -1,0 +1,13 @@
+.leader{
+    position: fixed;
+    top:0;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+.blogList{
+    flex: 1;
+}

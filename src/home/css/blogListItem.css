@@ -1,0 +1,55 @@
+.container{
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.title_content{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title{
+    color: #333;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.secondTitle{
+    font-size: 15px;
+    font-weight: normal;
+    color: #999;
+}
+
+.content{
+    flex:3;
+    color: #555;
+    font-size: 15px;
+}
+
+.read{
+    color:#555;
+    font-size: 12px;
+}
+
+.collect{
+    margin-left: 10px;
+    color:#555;
+    font-size: 12px;
+}
+
+.comment{
+    margin-left: 10px;
+    color:#555;
+    font-size: 12px;
+}
+
+.foot_content{
+    flex:0.5;
+    display: flex;
+    align-items: center;
+}
