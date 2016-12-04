@@ -37,7 +37,7 @@ class NavLeader extends Component{
                 console.log("login");
                 break;
             case "register":
-                console.log("register");
+                Navigator.push("/register");
                 break;
             case "quit":
                 console.log("quit");

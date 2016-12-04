@@ -6,6 +6,8 @@
 .container{
     margin-top: 60px;
     display: flex;
+    width: 80%;
+    margin-left: 10%;
     flex-direction: row;
 }
 
