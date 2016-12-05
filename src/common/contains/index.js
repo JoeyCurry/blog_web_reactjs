@@ -13,26 +13,27 @@ class RootIndex extends Component{
         // console.log(this.props.dispatch);
         return (
             <div ref='content'>
-                
+                {/* <Loading /> */}
                 { this.props.children }
             </div>
         );
     }
 }
 
-function mapStateToProps(state, props) {
-    // urlDecorator.setData(state.toJS());
-    // return {
-    //     user : state.get('user'),
-    //     relaxMusics : state.get('relaxMusics'),
-    //     recordTPL: state.get('recordTPL'),
-    // }
-}
+// function mapStateToProps(state, props) {
+//     // urlDecorator.setData(state.toJS());
+//     // return {
+//     //     user : state.get('user'),
+//     //     relaxMusics : state.get('relaxMusics'),
+//     //     recordTPL: state.get('recordTPL'),
+//     // }
+// }
+//
+// function mapActionToProps(){
+//     // return {
+//     //     chatLogin,
+//     // }
+// }
 
-function mapActionToProps(){
-    // return {
-    //     chatLogin,
-    // }
-}
-
-export default connect(mapStateToProps)(RootIndex);
+// export default connect(mapStateToProps)(RootIndex);
+export default RootIndex;

@@ -37,7 +37,7 @@ class NavLeader extends Component{
                 console.log("login");
                 break;
             case "register":
-                console.log("register");
+                Navigator.push("/register");
                 break;
             case "quit":
                 console.log("quit");
@@ -58,75 +58,63 @@ class NavLeader extends Component{
 
     render(){
         return (
-                <Navbar fixedTop>
-                    <Navbar.Header>
-                        <Navbar.Brand>
-                            一个人的自言自语
-                        </Navbar.Brand>
-                    </Navbar.Header>
-                    <Nav activeKey={this.props.activeKey}>
-                        <NavItem
-                        onSelect={()=>this.handleClick("blog")}
-                        eventKey={1}
-                        >自说自话</NavItem>
-                        <NavItem
-                            onSelect={()=>this.handleClick("ask")}
-                            eventKey={2}>你问我答</NavItem>
-                    </Nav>
-                        {!this.props.isLogin
-                            ?
-                            <Nav pullRight >
-                                <NavItem
-                                    eventKey={1}
-                                    onSelect={()=>this.handleClick("login")}
-                                    >登录</NavItem>
-                                <NavItem
-                                    onSelect={()=>this.handleClick("register")}
-                                    eventKey={2} >注册</NavItem>
-                                <NavItem
-                                    onSelect={()=>this.handleClick("aboutMe")}
-                                    eventKey={3} >关于我</NavItem>
-                             </Nav>
-                            :
-                            <Nav pullRight >
-                                <NavDropdown
-                                    title={this.props.userName}
-                                    id="basic-nav-dropdown"
-                                    eventKey={1} >
-                                        <MenuItem
-                                            onSelect={()=>this.handleClick("userInfo")}
-                                            eventKey={1.1}>关于你</MenuItem>
-                                        <MenuItem
-                                            onSelect={()=>this.handleClick("userMsg")}
-                                            eventKey={1.2}>你的消息</MenuItem>
-                                        <MenuItem
-                                            onSelect={()=>this.handleClick("userCollect")}
-                                            eventKey={1.3}>你的收藏</MenuItem>
-                                        <MenuItem divider />
-                                        <MenuItem
-                                            onSelect={()=>handleClick("quit")}
-                                            eventKey={1.3}>不再登录</MenuItem>
-                                </NavDropdown>
-                                <NavItem
-                                    onSelect={()=>handleClick("aboutMe")}
-                                    eventKey={2} >关于我</NavItem>
-                            </Nav>
-                        }
-                </Navbar>
+            <Navbar fixedTop>
+                <Navbar.Header>
+                    <Navbar.Brand>
+                        一个人的自言自语
+                    </Navbar.Brand>
+                </Navbar.Header>
+                <Nav activeKey={this.props.activeKey}>
+                    <NavItem
+                    onSelect={()=>this.handleClick("blog")}
+                    eventKey={1}
+                    >自说自话</NavItem>
+                    <NavItem
+                        onSelect={()=>this.handleClick("ask")}
+                        eventKey={2}>你问我答</NavItem>
+                </Nav>
+                    {!this.props.isLogin
+                        ?
+                        <Nav pullRight >
+                            <NavItem
+                                eventKey={1}
+                                onSelect={()=>this.handleClick("login")}
+                                >登录</NavItem>
+                            <NavItem
+                                onSelect={()=>this.handleClick("register")}
+                                eventKey={2} >注册</NavItem>
+                            <NavItem
+                                onSelect={()=>this.handleClick("aboutMe")}
+                                eventKey={3} >关于我</NavItem>
+                         </Nav>
+                        :
+                        <Nav pullRight >
+                            <NavDropdown
+                                title={this.props.userName}
+                                id="basic-nav-dropdown"
+                                eventKey={1} >
+                                    <MenuItem
+                                        onSelect={()=>this.handleClick("userInfo")}
+                                        eventKey={1.1}>关于你</MenuItem>
+                                    <MenuItem
+                                        onSelect={()=>this.handleClick("userMsg")}
+                                        eventKey={1.2}>你的消息</MenuItem>
+                                    <MenuItem
+                                        onSelect={()=>this.handleClick("userCollect")}
+                                        eventKey={1.3}>你的收藏</MenuItem>
+                                    <MenuItem divider />
+                                    <MenuItem
+                                        onSelect={()=>handleClick("quit")}
+                                        eventKey={1.3}>不再登录</MenuItem>
+                            </NavDropdown>
+                            <NavItem
+                                onSelect={()=>handleClick("aboutMe")}
+                                eventKey={2} >关于我</NavItem>
+                        </Nav>
+                    }
+            </Navbar>
         )
     }
 }
 
-function mapStateToProps(state,props) {
-    return {
-        // : state.get(''),
-    }
-}
-
-function mapActionToProps(){
-    return {
-
-    }
-}
-
-export default connect(mapStateToProps, mapActionToProps())(NavLeader);
+export default NavLeader;

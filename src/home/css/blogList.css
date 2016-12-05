@@ -1,5 +1,62 @@
+.main{
+    height: 100%;
+    width: 100%;
+}
+
 .container{
     margin-top: 60px;
-    padding-left: 5%;
-    padding-right: 5%;
+    display: flex;
+    width: 80%;
+    margin-left: 10%;
+    flex-direction: row;
+}
+
+.bloglist_container{
+    flex:3;
+    background-color: #fff;
+}
+
+.bloglist_left{
+    flex: 1;
+    background-color: #fff;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.left_border{
+    margin-top: 50px;
+    width: 200px;
+    min-height: 100px;
+    /* height: 100%; */
+    background-color: #eee;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    box-shadow: 0 0 3px 0 #eee;
+}
+
+.left_border_text{
+    padding: 5px;
+}
+
+.search{
+    width: 200px;
+    margin-top: 20px;
+}
+
+.img_search{
+    width: 20px;
+    height: 20px;
+}
+
+.left_month_list{
+    margin-top: 10px;
+    /* height: 100%; */
+    width: 200px;
+    background-color: #eee;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    box-shadow: 0 0 3px 0 #eee;
 }
