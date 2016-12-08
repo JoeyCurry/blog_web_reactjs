@@ -160,7 +160,7 @@ class BlogList extends Component{
     render(){
         return(
             <div className={styles.main}>
-                <div className="container">
+                <div>
                     <div className={styles.container}>
 
                         <div className={styles.bloglist_container}>

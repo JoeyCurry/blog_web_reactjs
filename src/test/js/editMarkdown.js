@@ -22,7 +22,8 @@ class EditMarkdown extends Component{
                 '[感谢react-codemirror](https://github.com/JedWatson/react-codemirror) \n\n',
                 '[感谢react-markdown](https://github.com/rexxars/react-markdown)\n\n'
             ].join(''),
-            htmlMode: 'raw'
+            htmlMode: 'raw',
+            msg:""
         }
     }
 
@@ -37,6 +38,12 @@ class EditMarkdown extends Component{
         });
     }
 
+    handleSaveClick(){
+        this.setState({
+            msg:this.state.markdownSrc
+        })
+    }
+
     render(){
 
         return(
@@ -48,6 +55,9 @@ class EditMarkdown extends Component{
                        <FormControl type="text" placeholder="输入标题"/>
                      </InputGroup>
                    </FormGroup>
+                </div>
+                <div onClick={()=>{this.handleSaveClick()}}>
+                    保存
                 </div>
                 <div className="editor-pane">
                     {/* <MarkdownControls
@@ -64,6 +74,14 @@ class EditMarkdown extends Component{
                                 CodeBlock:CodeBlock
                             })} />
                     </div>
+                </div>
+
+                <div style={{height:'400px',width:"400px"}}>
+                    <ReactMarkdown
+                            className="result"
+                            source={this.state.msg}
+                            className={styles.content}>
+                 </ReactMarkdown>
                 </div>
             </div>
         )

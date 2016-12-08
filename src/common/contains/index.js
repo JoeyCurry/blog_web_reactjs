@@ -13,7 +13,7 @@ class RootIndex extends Component{
         // console.log(this.props.dispatch);
         return (
             <div ref='content'>
-
+                {/* <Loading /> */}
                 { this.props.children }
             </div>
         );

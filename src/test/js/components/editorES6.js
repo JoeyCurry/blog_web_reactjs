@@ -10,10 +10,10 @@ class EditorES6 extends Component{
         }
     }
 
-    updateCode(newCode){
-        this.props.onChange(newCode);
+    updateCode(){
+        this.props.onChange(this.refs["codemirror"].getCodeMirror().getValue());
         this.setState({
-            code:newCode
+            code:this.refs["codemirror"].getCodeMirror().getValue()
         })
     }
 
@@ -26,6 +26,7 @@ class EditorES6 extends Component{
         return(
             <form className='editor pure-form'>
                 <CodeMirror
+                    ref="codemirror"
                     className={styles.codemirror}
                     value={this.state.code}
                     options={options}

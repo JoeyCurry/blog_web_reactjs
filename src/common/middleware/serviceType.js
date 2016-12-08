@@ -1,5 +1,5 @@
 const serviceType = {
-    // account: 'ACCOUNTSERVICE',
+    account: 'ACCOUNTSERVICE',
     // relax: 'REALXSERVICE',
     // casebooks: 'CASEBOOKSSERVICE',
     // room: 'ROOMSERVICE',
