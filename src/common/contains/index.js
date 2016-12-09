@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import MySnackbar from '../components/snackbar.js'
 //主模板
 class RootIndex extends Component{
 
@@ -10,9 +11,10 @@ class RootIndex extends Component{
 
 
     render(){
-        // console.log(this.props.dispatch);
+        console.log(this.props.children);
         return (
             <div ref='content'>
+                <MySnackbar />
                 {/* <Loading /> */}
                 { this.props.children }
             </div>

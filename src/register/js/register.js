@@ -15,13 +15,13 @@ import {
 } from '../../common/action/accountActions.js'
 
 // material-ui
-import lightBaseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
+import THEME from '../../common/theme.js'
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import TextField from 'material-ui/TextField';
 import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import FlatButton from 'material-ui/FlatButton';
-import Snackbar from 'material-ui/Snackbar';
+
 
 const REGISTER_URL = "http://192.168.1.188:8000/register/"
 class Register extends Component{
@@ -70,20 +70,22 @@ class Register extends Component{
         }
     }
 
-    handleRequestClose(){
-        this.setState({
-            open:!this.state.open
-        })
-    }
+    // handleRequestClose(){
+    //     this.setState({
+    //         open:!this.state.open
+    //     })
+    // }
 
     errShow(validList){
         this.validHelper.setValid(validList);
         let ret = this.validHelper.valid();
         if (ret) {
-            this.setState({
-                open:!this.state.open,
-                snackbarMsg:ret
-            })
+            console.log(ret);
+            MySnackbar.show(ret);
+            // this.setState({
+            //     open:!this.state.open,
+            //     snackbarMsg:ret
+            // })
             return false;
         }
         return true;
@@ -95,7 +97,7 @@ class Register extends Component{
                     <div className={styles.container} style={{backgroundImage:"url(" + imgRegBack2 + ")"}}>
                         <div className={styles.backblur}></div>
                         <div className={styles.content}>
-                                <MuiThemeProvider muiTheme={getMuiTheme(lightBaseTheme)}>
+                                <MuiThemeProvider muiTheme={getMuiTheme(THEME)}>
                                     <div>
                                         <div className={styles.testfield}>
                                             <TextField
@@ -117,13 +119,13 @@ class Register extends Component{
                                                 label="上  船"
                                                 primary={true} />
                                         </div>
-                                        <Snackbar
+                                        {/* <Snackbar
                                           open={this.state.open}
                                         //   className={styles.snackbar}
                                           message={this.state.snackbarMsg}
                                           autoHideDuration={2000}
                                           onRequestClose={()=>{this.handleRequestClose()}}
-                                        />
+                                        /> */}
                                     </div>
                                 </MuiThemeProvider>
                         </div>

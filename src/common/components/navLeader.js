@@ -10,6 +10,8 @@ import {
     FormGroup,
     FormControl,
 } from 'react-bootstrap';
+import LoginDialog from './loginDialog';
+
 
 /**
  * 公用的顶部导航条 定在顶部
@@ -22,7 +24,7 @@ import {
 class NavLeader extends Component{
 
     constructor(props){
-        super(props)
+        super(props);
     }
 
     handleClick(type){
@@ -35,7 +37,7 @@ class NavLeader extends Component{
                 console.log("ask");
                 break;
             case "login":
-                console.log("login");
+                this.refs['login'].toggle();
                 break;
             case "register":
                 Navigator.push("/register");
@@ -55,6 +57,10 @@ class NavLeader extends Component{
             default:
 
         }
+    }
+
+    handleSubmit(userName,password){
+        console.log(userName,password);
     }
 
     render(){
@@ -113,6 +119,9 @@ class NavLeader extends Component{
                                 eventKey={2} >关于我</NavItem>
                         </Nav>
                     }
+                    <LoginDialog
+                        ref='login'
+                        />
             </Navbar>
         )
     }
