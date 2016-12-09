@@ -29,6 +29,7 @@ class NavLeader extends Component{
         switch (type) {
             case "blog":
                 console.log("blog");
+                Navigator.push("/")
                 break;
             case "ask":
                 console.log("ask");
