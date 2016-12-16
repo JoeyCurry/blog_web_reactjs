@@ -32,8 +32,8 @@ class AccountService extends BaseService {
         }).then( response => {
             return response.json();
         }).then( responseData => {
+            console.log(responseData)
             if(responseData.code == 200){
-                console.log(responseData);
                 let data = responseData.data.userMsg;
                 this.dispatch(register(data));
                 this.success(data);
